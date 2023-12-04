@@ -1,0 +1,205 @@
+body {
+    font-family: "Open Sans";
+  }
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html {
+font-size: 10px;
+scroll-behavior: smooth;
+}
+a {
+    text-decoration: none;
+}
+.container{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: top;
+    justify-content: center;
+}
+.section-title{
+    font-size: 4rem;
+    font-weight: 300;
+    color: black;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    text-align: center;
+}
+
+.brand::after{
+    content:'| Gallery';
+}
+/* Hero Section */
+#hero{
+    background-color:rgb(231, 231, 231);
+    background-size: 300px 300px;
+    z-index: 1;
+    width: 100vw;
+    height: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+}
+#hero .hero-container{
+    width: 50%;
+    height: 99vh;
+    background-size: cover;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+
+}
+#hero h3{
+    display: flex;
+    font-size: 20px;
+    margin-top: 5px;
+}
+#hero h1{
+    display: flex;
+    font-size: 70px;
+    color: transparent;
+    animation: text_reveal 1s ease forwards;
+    animation-delay: .8s;
+    font-family: "Borel";
+    margin-top: 20px;
+}
+#hero p{
+    font-size: 18px;
+    margin-top: 2px;
+}
+
+#hero .hero-right{
+    width: 50%;
+    height: 99vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+#hero .hero-right .bpafter{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.hero-right .folder-container{
+    width: 33.33%;
+    height: 100%;
+    align-items: center;
+    justify-content: space-around;
+    display: flex;
+}
+.folder-container:nth-child(1){
+    background-image: url(./img/IMG_89621.jpg);
+    background-size: cover;
+}
+.folder-container:nth-child(1):hover a{
+    animation: bgchange 1.5s ease-in-out;
+    animation-iteration-count: infinite;
+    background-size: cover;
+}
+.folder-container:nth-child(2){
+    background-image: url(./img/IMG_8872.jpg);
+    background-size: cover;
+}
+.folder-container:nth-child(3){
+    background-image: url(./img/IMG_8839.jpg);
+    background-size: cover;
+}
+
+#hero .hero-right .bpafter a{
+    flex-direction: column;
+    display: flex;
+    text-align: center;
+    width: fit-content;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    height: 100%;
+    width: 100%;
+    font-size: 15px;
+}
+
+/* End Hero Section */
+
+
+
+
+
+    /* Keyframes */
+
+@keyframes text_reveal{
+
+    50%{
+        color: white;
+        font-size: 90px;
+    }
+    100%{
+        color:black;
+    }
+}
+
+@keyframes bgchange{
+    0%{
+        background-image: url(./img/IMG_8962.jpg);
+    }
+    10%{
+        background-image: url(./img/IMG_9041.jpg);
+    }
+    20%{
+        background-image: url(./img/IMG_9056.jpg);
+    }
+    30%{
+        background-image: url(./img/IMG_9064.jpg);
+    }
+    40%{
+        background-image: url(./img/IMG_9072.jpg);
+    }
+    50%{
+        background-image: url(./img/IMG_9081.jpg);
+    }
+    60%{
+        background-image: url(./img/IMG_9056.jpg);
+    }
+    70%{
+        background-image: url(./img/IMG_9071.jpg);
+    }
+    80%{
+        background-image: url(./img/IMG_9079.jpg);
+}
+}
+/* End Keyframes */
+
+/* Media Query for Tablet */
+@media only screen and (max-width:700px){
+
+#hero .hero-container{
+    width: 100%;
+    height: 60vh;
+}
+#hero .hero-right{
+    width: 100%;
+    height: 40vh;
+}
+
+#hero .hero-right .bpafter{
+    width: 100%;
+}
+.hero-right .folder-container{
+    width: 33.33;
+    height: 100%;
+}
+#hero .hero-right .bpafter img{
+    width: 150px;
+    height: 150px;
+}
+}
+/* End Media Query for Tablet */
