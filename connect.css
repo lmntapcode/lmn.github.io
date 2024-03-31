@@ -346,14 +346,13 @@ a {
     margin: 0;
     justify-content: center;
     align-items: center;
-    width: 90%;
+    width: 90vw;
     height: 93vh;
 }
 .bef{
     border-radius: 0;
     height: 100%;
-    width: 100%;
-    pointer-events: none;
+    width: 100%; 
     margin: 0;
     padding: 0;
     box-shadow: none;
@@ -405,6 +404,16 @@ a {
 .befimg:nth-child(2){
     transform: translateX(0);
     transform: translateY(30px);
+}
+
+#hero .bef:hover .dropright{
+    animation:none;
+}
+#hero .bef:hover .aft{
+    animation: none;
+}
+#hero .bef:hover .dropleft{
+    height: 40%;
 }
 }
 

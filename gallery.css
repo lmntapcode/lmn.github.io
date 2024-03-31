@@ -55,7 +55,6 @@ a {
     align-items: center;
     padding-left: 20px;
     padding-right: 20px;
-
     color: whitesmoke;
     font-size: 18px;
     background-color: rgba(25, 25, 25, 0.2);
@@ -143,7 +142,6 @@ a {
     filter: grayscale(1);
     background-position-y: -150px;
 }
-
 /* End Hero Section */
 
 
@@ -243,4 +241,3 @@ a {
 }
 }
 /* End Media Query for Tablet *
-
