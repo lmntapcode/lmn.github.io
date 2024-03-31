@@ -189,8 +189,6 @@ a {
 
 .adt{ display: none;}
 
-
-
     /* Keyframes */
 
 @keyframes text_reveal{
@@ -256,6 +254,7 @@ a {
 
 #hero .hero-right .bpbefore{
     display: none;
+
 }
 }
 /* End Media Query for Tablet */
