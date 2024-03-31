@@ -1,0 +1,247 @@
+body {
+    font-family: "Afacad";
+    overflow: hidden;
+  }
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html {
+font-size: 10px;
+scroll-behavior: smooth;
+}
+a {
+    text-decoration: none;
+}
+
+.container{
+    min-height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: top;
+    justify-content: center;
+}
+.section-title{
+    font-size: 4rem;
+    font-weight: 300;
+    color: black;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    text-align: center;
+}
+
+/* Hero Section */
+#hero{
+    z-index: 1;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    background-image: url(./img/IMG_4062.JPG);
+    background-size: cover;
+}
+#hero .hero-container{
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: whitesmoke;
+    font-size: 18px;
+    background-color: rgba(4, 4, 4, 0.3);
+}
+
+#hero h1{
+    display: flex;
+    font-size: 70px;
+    color: transparent;
+    animation: text_reveal2 1s ease forwards;
+    animation-delay: .8s;
+    font-family: "Borel";
+    margin-top: 20px;
+}
+
+#hero .hero-right{
+    width: 100%;
+    height: 100vh;
+    justify-content: space-around;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: visible;
+    padding-top: 10vh;
+    background-color: rgba(4, 4, 4, 0.3);
+}
+.folder-container h4{
+    color: rgb(173, 173, 173);
+    font-size: 13px;
+}
+.folder-container .activee{
+    color: whitesmoke;
+    font-weight: bolder;
+    font-size: 13px;
+}
+
+.dropdown-content {
+    display: flex;
+    width: 26vw;
+    height: 65vh;
+    box-shadow: 2px 1px 5px #616161; 
+    overflow: hidden;
+    flex-direction: column-reverse;
+    border-radius: 10px;
+    margin-bottom: 10vh;
+    background-color: transparent;
+  }
+  .dropdown-content:hover .dropright{
+    filter: none;
+  }
+
+.dropleft{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items:baseline;
+    justify-content: center;
+    padding-left: 20px;
+    padding-right: 15px;
+    padding-bottom: 20px;
+    background-color: rgb(231, 231, 231);
+    color: rgb(18, 18, 18);
+}
+.dropleft h2{
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+.dropleft h3{
+    font-size: 15px;
+    margin-bottom: 10px;
+    font-style: italic;
+}
+.dropleft p{
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+.dropright{
+    width: 100%;
+    height: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    filter: grayscale(1);
+    background-position-y: -150px;
+}
+
+
+/* End Hero Section */
+
+
+
+
+
+    /* Keyframes */
+
+@keyframes text_reveal{
+
+    50%{
+        color: rgb(250, 250, 250);
+        font-size: 90px;
+    }
+    100%{
+        color:#252525;
+    }
+}
+@keyframes text_reveal2{
+
+    50%{
+        color: rgb(56, 56, 56);
+        font-size: 90px;
+    }
+    100%{
+        color:whitesmoke;
+    }
+}
+
+/* End Keyframes */
+
+
+/* Media Query for Tablet */
+@media only screen and (max-width:1000px){
+    .folder-container h4{
+        color: rgb(173, 173, 173);
+        font-size: 13px;
+    }
+    .folder-container .activee{
+        color: whitesmoke;
+        font-weight: bolder;
+        font-size: 13px;
+    }
+#hero{
+        color: whitesmoke;
+        overflow: hidden;
+        background-image: url(./img/IMG_4061.JPG);
+}
+#hero .hero-container{
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    color: whitesmoke;
+}
+#hero h1{
+    animation: text_reveal2 1s ease forwards;
+}
+
+#hero .hero-right{
+    width: 100%;
+    height: max-content;
+    overflow: visible;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    backdrop-filter: blur(5px);
+    background-color: rgba(75, 75, 75, 0.3);
+    border-top-left-radius: 0;
+    margin-top: 0;
+    padding-top: 80px;
+    padding-bottom: 20px;
+}
+.dropdown-content{
+    width: 350px;
+    height: 500px;
+    flex-direction: column-reverse;
+    background-color:transparent;
+    border-radius: 10px;
+    border: none;
+    box-shadow: none;
+}
+
+.dropleft{
+    width: 100%;
+    height: 40%;
+    justify-content: center;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 10px;
+    padding-top: 0px;
+    background-color: transparent;
+    color: whitesmoke;
+}
+
+.dropright{
+    width: 100%;
+    height: 60%;
+    border-top-left-radius: 70px;
+    border-bottom-right-radius: 70px;
+}
+}
+/* End Media Query for Tablet *

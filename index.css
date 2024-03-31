@@ -1,5 +1,5 @@
 body {
-    font-family: "Open Sans";
+    font-family: "Afacad";
   }
 * {
     padding: 0;
@@ -13,6 +13,7 @@ scroll-behavior: smooth;
 a {
     text-decoration: none;
 }
+
 .container{
     min-height: 100vh;
     width: 100%;
@@ -29,9 +30,51 @@ a {
     letter-spacing: .2rem;
     text-align: center;
 }
-.brand::after{
-    content:'| Balo';
+
+.bpafter{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    animation: appear .5s ease forwards;
 }
+.folder-container{
+    width: 100px;
+    height: 100%;
+    align-items: center;
+    justify-content: space-around;
+    display: flex;
+    text-align: center;
+}
+ .bpafter a{
+    flex-direction: row;
+    display: flex;
+    text-align: center;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    color: rgb(54, 54, 54);
+    font-size: 13px;
+}
+.bpafter img{
+    width: 190px;
+    height: 200px;
+}
+
+ .closed{
+    display: flex;
+}
+ .open{
+    display: none;
+}
+.bpafter a:hover .closed{
+    display: none;
+}
+.bpafter a:hover .open{
+    display: flex;
+}
+
 /* Hero Section */
 #hero{
     background-color:rgb(231, 231, 231);
@@ -39,7 +82,7 @@ a {
     z-index: 1;
     padding-top: 41px;
     width: 100vw;
-    height: 99vh;
+    height: 100vh;
     display: flex;
     flex-wrap: wrap;
 }
@@ -89,6 +132,9 @@ a {
     height: 400px;
     display: flex;
     align-items: center;
+    border-radius: 20px;
+    border-top-left-radius: 70px;
+    border-bottom-right-radius: 70px;
 }
 
 #hero .right-container:hover .bpbefore{
@@ -107,7 +153,7 @@ a {
 }
 .hero-right .folder-container{
     width: 50%;
-    height: fit-content;
+    height: 50%;
     align-items: center;
     justify-content: space-around;
     display: flex;
@@ -122,8 +168,8 @@ a {
     color: black;
 }
 #hero .hero-right .bpafter img{
-    width: 190px;
-    height: 200px;
+    width: 167px;
+    height: 167px;
 }
 
 .hero-right .closed{
@@ -137,12 +183,11 @@ a {
 }
 .bpafter a:hover .open{
     display: flex;
+    animation: scale .5s ease forwards;
 }
 /* End Hero Section */
 
-
-
-
+.adt{ display: none;}
 
     /* Keyframes */
 
@@ -156,32 +201,60 @@ a {
         color:black;
     }
 }
-@keyframes appear{
+
+@keyframes scale{
     0%{
-        scale: 0;
+        scale: 1;
     }
     100%{
-        scale: 1;
+        scale: 1.1;
     }
 }
 /* End Keyframes */
 
 /* Media Query for Tablet */
-@media only screen and (max-width:700px){
+@media only screen and (max-width:800px){
+#header{
+    display: none;
+}
 #hero{
-    height: 100vh;
+    height: 200vh;
+    padding-top: 0ch;
 }
 #hero .hero-container{
     width: 100%;
-    height: fit-content;
+    height: 100vh;
+    padding-top: 0%;
+}
+.adt{
+    display: flex;
+}
+.minu{
+    display: none;
 }
 #hero .hero-right{
+    height: 100vh;
     width: 100%;
-    height: fit-content;
 }
-#hero .hero-right .bpafter img{
-    width: 150px;
-    height: 150px;
+#hero .hero-right .bpafter{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    justify-content: space-around;
+}
+.hero-right .folder-container{
+    width: 50%;
+    height: 50%;
+    justify-content: space-around;
+    display: flex;
+}
+.hero-right .folder-container a{
+    font-size: 15px;
+}
+
+#hero .hero-right .bpbefore{
+    display: none;
+
 }
 }
 /* End Media Query for Tablet */
