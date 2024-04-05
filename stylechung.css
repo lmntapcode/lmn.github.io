@@ -1,7 +1,11 @@
 
+body{
+    -webkit-line-box-contain: layout;
+
+}
 #header{
     position: fixed;
-    z-index: 1000;
+    z-index: 10;
     left: 0;
     top: 0;
     width: 100vw;
@@ -29,7 +33,7 @@
     flex-direction: row;
     justify-content: center;
     padding-left: 0;
-    font-family: 'Montserrat Alternates';
+    font-weight: normal;
 }
 
 .list img{
@@ -43,15 +47,19 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    animation: appear .5s ease forwards;
+    animation: appear2 .5s ease forwards;
 }
  .folder-container{
-    width: 60px;
+    width: fit-content;
     height: 37px;
     align-items: center;
     justify-content: space-around;
     display: flex;
     text-align: center;
+}
+.list .folder-container:hover h4{
+    color: whitesmoke;
+    animation: appear9 .2s ease forwards;
 }
 .bpafter .activeee{
     border-bottom: 1px solid whitesmoke;
@@ -63,7 +71,7 @@
     width: 100%;
     align-items: center;
     justify-content: center;
-    color: rgb(54, 54, 54);
+    color: whitesmoke;
     font-size: 13px;
 }
 .bpafter img{
@@ -83,6 +91,21 @@
 .bpafter a:hover .open{
     display: flex;
 }
+
+#hero h1{
+    display: flex;
+    font-size: 100px;
+    color: transparent;
+    animation: text_reveal2 1s ease forwards;
+    animation-delay: .1s;
+    font-family: "Cabin";
+}
+.hero-container a{
+    color: whitesmoke;
+    margin-top: 20px;
+    display: none;
+}
+
 @keyframes appear{
     0%{
         scale: 0;
@@ -91,16 +114,47 @@
         scale: 1;
     }
 }
+
+@keyframes appear2{
+    0%{
+        height: 0;
+    }
+    100%{
+        height: 50px;
+    }
+}
+
 @keyframes text_reveal2{
 
     50%{
         color: rgb(56, 56, 56);
-        font-size: 90px;
+        font-size: 50px;
     }
     100%{
         color:whitesmoke;
     }
 }
+@keyframes text_reveal3{
+
+    50%{
+        color: rgb(56, 56, 56);
+        font-size: 35px;
+    }
+    100%{
+        color:whitesmoke;
+    }
+}
+@keyframes appear9{
+
+    50%{
+        text-rendering: optimizeSpeed;
+    }
+    100%{
+        color:whitesmoke;
+        font-size: 17px;
+    }
+}
+
 /* End Header */
 
 
@@ -108,9 +162,34 @@
 .bpafter{
     width: 100%;
     justify-content: space-around;
-    padding: 0;
+    padding-left: 5vw;
+    padding-right: 5vw;
 }
 .bpafter .activeee{
-    border-bottom: 1px solid whitesmoke;
+    border: none;
+}
+.folder-container h4{
+    color: rgb(165, 165, 165);
+    font-size: 11px;
+}
+ .activeee{
+    display: none;
+}
+#hero .hero-container{
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    background-color: transparent;
+}
+#hero h1{
+    animation: text_reveal3 1s ease forwards;
+    animation-delay: .8s;
+    font-size: 70px;
 }
 }

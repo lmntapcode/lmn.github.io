@@ -40,8 +40,7 @@ a {
     display: flex;
     flex-wrap: wrap;
     overflow: hidden;
-    background-image: url(./img/IMG_4062.JPG);
-    background-size: cover;
+    background-color:#202020;
 }
 #hero .hero-container{
     width: 100%;
@@ -56,7 +55,6 @@ a {
     padding-right: 20px;
     color: whitesmoke;
     font-size: 18px;
-    background-color: rgba(4, 4, 4, 0.3);
 }
 
 #hero h1{
@@ -78,7 +76,6 @@ a {
     flex-wrap: wrap;
     overflow: visible;
     padding-top: 10vh;
-    background-color: rgba(4, 4, 4, 0.3);
 }
 .folder-container h4{
     color: rgb(173, 173, 173);
@@ -190,7 +187,8 @@ a {
 #hero{
         color: whitesmoke;
         overflow: hidden;
-        background-image: url(./img/IMG_4061.JPG);
+        background-image: none;
+        background-color:#202020;
 }
 #hero .hero-container{
     width: 100%;

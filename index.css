@@ -1,5 +1,5 @@
 body {
-    font-family: "Afacad";
+    font-family: "Cabin";
   }
 * {
     padding: 0;
@@ -14,142 +14,70 @@ a {
     text-decoration: none;
 }
 
-.container{
-    min-height: 100vh;
-    width: 100%;
-    display: flex;
-    align-items: top;
-    justify-content: center;
-}
-.section-title{
-    font-size: 4rem;
-    font-weight: 300;
-    color: black;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    letter-spacing: .2rem;
-    text-align: center;
-}
-
-.bpafter{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: right;
-    animation: appear .5s ease forwards;
-}
-.folder-container{
-    width: 100px;
-    height: 100%;
-    align-items: center;
-    justify-content: space-around;
-    display: flex;
-    text-align: center;
-}
- .bpafter a{
-    flex-direction: row;
-    display: flex;
-    text-align: center;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-    color: rgb(54, 54, 54);
-    font-size: 13px;
-}
-.bpafter img{
-    width: 190px;
-    height: 200px;
-}
-
- .closed{
-    display: flex;
-}
- .open{
+#header{
     display: none;
-}
-.bpafter a:hover .closed{
-    display: none;
-}
-.bpafter a:hover .open{
-    display: flex;
 }
 
 /* Hero Section */
 #hero{
-    background-color:rgb(231, 231, 231);
+    background-color:#202020;
+    color: whitesmoke;
     background-size: 300px 300px;
     z-index: 1;
-    padding-top: 41px;
     width: 100vw;
     height: 100vh;
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 }
 #hero .hero-container{
     width: 50vw;
     height: 100%;
     justify-content: center;
-    text-align: center;
+    text-align: justify;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items:flex-start;
+    padding-left: 5vw;
 }
 #hero h3{
     display: flex;
     font-size: 20px;
-    margin-top: 5px;
 }
 #hero h1{
     display: flex;
-    font-size: 70px;
+    font-size: 90px;
     color: transparent;
-    animation: text_reveal 1s ease forwards;
+    animation: text_reveal2 1s ease forwards;
     animation-delay: .8s;
-    font-family: "Borel";
-    margin-top: 20px;
+    font-family: "Cabin";
 }
 #hero p{
     font-size: 18px;
-    margin-top: 2px;
 }
 
 #hero .hero-right{
     width: 50vw;
-    height: 100%;
+    height: 90%;
     justify-content: center;
     align-items: center;
     display: flex;
 }
 #hero .right-container{
-    width: fit-content;
-    height: fit-content;
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: space-around;
 }
-#hero .hero-right .bpbefore{
-    width: 400px;
-    height: 400px;
-    display: flex;
-    align-items: center;
-    border-radius: 20px;
-    border-top-left-radius: 70px;
-    border-bottom-right-radius: 70px;
-}
 
-#hero .right-container:hover .bpbefore{
-    display: none;
-}
-#hero .right-container:hover .bpafter{
-    display: flex;
-}
 
 #hero .hero-right .bpafter{
     width: 100%;
     height: 100%;
-    display: none;
+    display: flex;
     flex-wrap: wrap;
-    animation: appear .5s ease forwards;
+    animation: appear .9s ease forwards;
 }
 .hero-right .folder-container{
     width: 50%;
@@ -163,31 +91,31 @@ a {
     display: flex;
     text-align: center;
     width: fit-content;
+    height: 25vh;
     align-items: center;
-    justify-content: center;
-    color: black;
+    justify-content: space-between;
 }
 #hero .hero-right .bpafter img{
-    width: 167px;
-    height: 167px;
+    width: 200px;
+    height: 200px;
+    margin-bottom: 20px;
+    border-radius: 30px;
 }
 
 .hero-right .closed{
     display: flex;
+    box-shadow: 0px 4px 40px #555555;
 }
 .hero-right .open{
     display: none;
+    box-shadow: 0px 4px 40px #555555;
 }
-.bpafter a:hover .closed{
-    display: none;
-}
-.bpafter a:hover .open{
-    display: flex;
-    animation: scale .5s ease forwards;
-}
+
+
 /* End Hero Section */
 
 .adt{ display: none;}
+
 
     /* Keyframes */
 
@@ -213,7 +141,7 @@ a {
 /* End Keyframes */
 
 /* Media Query for Tablet */
-@media only screen and (max-width:800px){
+@media only screen and (max-width:1000px){
 #header{
     display: none;
 }
@@ -251,10 +179,6 @@ a {
 }
 .hero-right .folder-container a{
     font-size: 15px;
-}
-
-#hero .hero-right .bpbefore{
-    display: none;
 }
 }
 /* End Media Query for Tablet */

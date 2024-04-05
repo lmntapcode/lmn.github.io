@@ -40,9 +40,7 @@ a {
     display: flex;
     flex-wrap: wrap;
     overflow: scroll;
-    background-color: rgb(245, 245, 245);
-    background-image: url(./img/IMG_3788.JPG);
-    background-size: cover;
+    background-color:#202020;
 }
 #hero .hero-container{
     width: 100%;
@@ -57,18 +55,8 @@ a {
     padding-right: 20px;
     color: whitesmoke;
     font-size: 18px;
-    background-color: rgba(25, 25, 25, 0.2);
 }
 
-#hero h1{
-    display: flex;
-    font-size: 70px;
-    color: transparent;
-    animation: text_reveal2 1s ease forwards;
-    animation-delay: .8s;
-    font-family: "Borel";
-    margin-top: 20px;
-}
 #hero .hero-right{
     width: 100%;
     height: 100vh;
@@ -78,7 +66,6 @@ a {
     flex-wrap: wrap;
     overflow: visible;
     padding-top: 10vh;
-    background-color: rgba(25, 25, 25, 0.2);
 }
 .folder-container h4{
     color: rgb(173, 173, 173);
@@ -94,7 +81,7 @@ a {
     display: flex;
     width: 26vw;
     height: 65vh;
-    box-shadow: 2px 1px 5px #616161; 
+    box-shadow: 0px 4px 40px #555555;
     overflow: hidden;
     flex-direction: column-reverse;
     border-radius: 10px;
@@ -186,18 +173,10 @@ a {
         font-size: 13px;
     }
 #hero{
-        background-image: url(./img/IMG_3788\ \(1\).jpg);
-        background-color:rgb(231, 231, 231);
+        background-color:#202020;
+        background-image: none;
         color: whitesmoke;
         overflow: scroll;
-}
-#hero .hero-container{
-    width: 100%;
-    height: 100vh;
-    color: whitesmoke;
-}
-#hero h1{
-    animation: text_reveal2 1s ease forwards;
 }
 
 #hero .hero-right{
@@ -238,6 +217,8 @@ a {
     height: 60%;
     border-top-left-radius: 70px;
     border-bottom-right-radius: 70px;
+    border-top-right-radius: 70px;
 }
 }
 /* End Media Query for Tablet *
+
