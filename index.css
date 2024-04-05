@@ -176,6 +176,11 @@ a {
     height: 50%;
     justify-content: space-around;
     display: flex;
+    
+}
+#hero .hero-right .bpafter img{
+    width: 18vh;
+    height: 18vh;
 }
 .hero-right .folder-container a{
     font-size: 15px;

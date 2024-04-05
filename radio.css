@@ -380,13 +380,14 @@ a {
     padding-top: 5vh;
 }
 .playlists{
-    height: 270px;
+    height: 260px;
     width: 50%;
 }
 .lis{
-    width: 200px;
-    height: 200px;
+    width: 90%;
+    height: 90%;
 }
+
 }
 
 /* End Media Query for Tablet *
