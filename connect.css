@@ -148,7 +148,6 @@ a {
 .dropleft h2{
     font-size: 30px;
     margin-bottom: 6px;
-    transform: translateY(-10px);
 }
 .dropleft h3{
     font-size: 15px;
@@ -209,11 +208,11 @@ a {
 }
 .befimg:nth-child(1){
     transform: translateX(0);
-    transform: translateY(80px);
+    transform: translateY(8vh);
 }
 .befimg:nth-child(2){
     transform: translateX(0);
-    transform: translateY(80px);
+    transform: translateY(8vh);
 }
 
 
@@ -332,7 +331,7 @@ a {
     width: 100vw;
     height: 200vh;
     align-items: center;
-    overflow:hidden;
+    overflow:visible;
     flex-wrap: nowrap;
     flex-direction: column;
 }
@@ -423,7 +422,7 @@ a {
     width: 90vw;
     border-top: none;
     box-shadow: 0px 4px 40px #555555;
-    margin-top: 20px;
+    margin-bottom: 20px;
 }
 #hero .inner:hover .aft .folder-container{
     width: 100%;
@@ -439,6 +438,7 @@ a {
     border-radius: 0;
     box-shadow: none;
     width: 100%;
+    padding-top: 7vh;
     border-bottom: 1px solid rgb(171, 171, 171);
 }
 
@@ -446,6 +446,15 @@ a {
     overflow:visible;
     width: 100vw;
     align-items: center;
+    }
+
+    .befimg:nth-child(1){
+        transform: translateX(0);
+        transform: translateY(7vh);
+    }
+    .befimg:nth-child(2){
+        transform: translateX(0);
+        transform: translateY(7vh);
     }
 }
 
