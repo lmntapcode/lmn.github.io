@@ -1,0 +1,452 @@
+body {
+    font-family: "Cabin";
+    overflow: hidden;
+  }
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html {
+font-size: 10px;
+scroll-behavior:unset;
+}
+a {
+    text-decoration: none;
+}
+
+.container{
+    min-height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: top;
+    justify-content: center;
+}
+.section-title{
+    font-size: 4rem;
+    font-weight: 300;
+    color: black;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    text-align: center;
+}
+
+/* Hero Section */
+#hero{
+    z-index: 1;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: scroll;
+    background-color:#202020;
+}
+#hero .hero-container{
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: whitesmoke;
+    font-size: 18px;   
+}
+
+#hero h1{
+    display: flex;
+    font-size: 70px;
+    color: transparent;
+    animation: text_reveal2 1s ease forwards;
+    animation-delay: .8s;
+    font-family: "Cabin";
+    margin-top: 20px;
+}
+
+#hero .hero-right{
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+.folder-container h4{
+    color: rgb(173, 173, 173);
+    font-size: 13px;
+}
+.folder-container .activee{
+    color: whitesmoke;
+    font-weight: bolder;
+    font-size: 13px;
+}
+.dropdown-content {
+    display: flex;
+    width: 50%;
+    height: 100vh; 
+    flex-direction: column;
+    background-color: transparent;
+    justify-content:left;
+    align-items: center;
+    overflow: hidden;
+    padding-top: 10vh;
+}
+.inner{
+    width: 70%;
+    height: max-content;
+    display: flex;
+    flex-direction: row;
+    padding-left: 5%;
+    padding-right: 5%;
+    justify-content: center;
+    align-items: center;
+    overflow: visible;
+}
+
+.bef {
+    display: flex;
+    width: 100%;
+    height: max-content;
+    overflow:hidden;
+    flex-direction: column;
+    border-top-left-radius: 71px;
+    border-top-right-radius: 71px;
+    animation-delay: 10s;
+    animation: reveal 2s ease forwards;
+    margin-top: 29vh;
+    box-shadow: 0px 4px 40px #555555;
+  }
+  .trai{
+    border-bottom-right-radius: 71px;
+    transform: translateX(-1000px);
+  }
+  .phai {
+    border-bottom-left-radius: 71px;
+    transform: translateX(1000px);
+  }
+
+.dropleft{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content:center;
+    text-align: justify;
+    padding-left: 20px;
+    padding-right: 15px;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    background-color: rgb(231, 231, 231);
+    color: rgb(18, 18, 18);
+}
+.dropleft h2{
+    font-size: 30px;
+    margin-bottom: 6px;
+    transform: translateY(-10px);
+}
+.dropleft h3{
+    font-size: 15px;
+    margin-bottom: 15px;
+    font-style: italic;
+}
+.dropleft p{
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.dropright{
+    width: 100%;
+    height: 0vh;
+    display: none;
+    background-position-y: -40px;
+   overflow: visible;
+   justify-content: center;
+   align-items: end;
+}
+
+.nho{
+    display: none;
+    
+}
+
+#hero .inner:hover .dropright{
+    animation: appear5 .5s ease forwards;
+    display: flex;
+    border-top-left-radius: 71px;
+    border-top-right-radius: 71px;
+    box-shadow: 0px 4px 40px #555555;
+}
+#hero .inner:hover .aft{
+    animation: appear6 .5s ease forwards;
+    display: flex;
+    margin-top: 20px;
+}
+#hero .inner:hover .dropleft{
+    height: 40vh;
+    border-bottom-left-radius: 71px;
+    border-bottom-right-radius: 71px;
+    box-shadow: 0px 4px 40px #555555;
+}
+#hero .inner:hover .bef{
+    height: 100%;
+    overflow:visible;
+    margin-top: 0;
+    box-shadow: none;
+}
+
+.nho{
+    display: flex;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    margin: 0;
+}
+.befimg:nth-child(1){
+    transform: translateX(0);
+    transform: translateY(80px);
+}
+.befimg:nth-child(2){
+    transform: translateX(0);
+    transform: translateY(80px);
+}
+
+
+ .aft{
+    width: 100%;
+    height: 20vh;
+    display: none;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-top-left-radius: 71px;
+    border-top-right-radius: 71px;
+    border-top: 1px solid rgb(171, 171, 171);
+    background-color: #dfdfdf;
+}
+.aft.folder-container{
+    width: fit-content;
+    height: 100%;
+    align-items: center;
+    justify-content: space-around;
+    display: flex;
+}
+ .aft a{
+    flex-direction: column;
+    display: flex;
+    text-align: center;
+    width: 25%;
+    align-items: center;
+    justify-content: center;
+    color: black;
+}
+.aft h4{
+    color: #202020;
+}
+.aft img{
+    width: 40px;
+    height: 40px;
+}
+
+
+/* End Hero Section */
+
+
+
+
+
+    /* Keyframes */
+    @keyframes reveal{
+        0%{
+        }
+        100%{
+            transform: translateX(0);
+        }
+    }
+
+
+    @keyframes appear5{
+        0%{
+            height:10vh;
+        }
+        100%{
+            height: 20vh;
+        }
+    }
+
+    @keyframes appear6{
+        0%{
+            height:15vh;
+        }
+        100%{
+            height: 30vh;
+        }
+    }
+    @keyframes appear7{
+        0%{
+            height: 20vh;
+        }
+        100%{
+            height: fit-content;
+        }
+    }
+
+@keyframes text_reveal2{
+
+    50%{
+        color: rgb(56, 56, 56);
+        font-size: 90px;
+    }
+    100%{
+        color:whitesmoke;
+    }
+}
+
+/* End Keyframes */
+
+
+/* Media Query for Tablet */
+@media only screen and (max-width:1000px){
+#hero{
+        color: whitesmoke;
+        overflow: scroll;
+        background-color:#202020;
+        background-image: none;
+}
+#hero .hero-container{
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    color: whitesmoke;
+}
+
+#hero .hero-right{
+    width: 100vw;
+    height: 200vh;
+    align-items: center;
+    overflow:hidden;
+    flex-wrap: nowrap;
+    flex-direction: column;
+}
+.dropdown-content{
+    width: 100vw;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    overflow: visible;
+}
+.dropdown-content:nth-child(1){
+    justify-content: center;
+    padding: 0;
+}
+.dropdown-content:nth-child(2){
+    justify-content: center;
+    padding: 0;
+}
+.inner{
+    width: fit-content;
+    height: fit-content;
+    padding: 0;
+}
+.aft .folder-container:hover h4{
+    font-size: 20px;
+    color: #202020;
+}
+    .aft .folder-container h4{
+    font-size: 14px;
+    color: #4a4a4a;
+}
+.aft .folder-container:hover a{
+    background-color: rgb(205, 205, 205);
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+ .aft a{
+    flex-direction: row;
+    text-align: center;
+    height: 100px;
+    width: 100%;
+    align-items: center;
+    justify-content: start;
+    color: black;
+    padding-left: 5vw;
+    padding-right: 5vw;
+}
+.aft .folder-container:hover img{
+    display: flex;
+}
+.aft img{
+    display: none;
+}
+.bef{
+    margin-top: 0;
+    width: 70vw;
+}
+
+.nho{
+    display: flex;
+    width: 140px;
+    height: 140px;
+    border-radius: 10px;
+    animation: none;
+    margin: 0;
+}
+#hero .inner:hover .dropright{
+    border-radius: 0;
+    box-shadow: none;
+    width: 100%;
+    height: 20vh;
+   background-position-y: -30px;
+   padding: 0%;
+   align-items:flex-end;
+   display: flex;
+}
+#hero .inner:hover .aft{
+    animation: appear7 .5s ease forwards;
+    display: flex;
+    height: fit-content;
+    overflow: hidden;
+    border-radius: 30px;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: start;
+    padding: 0;
+    width: 90vw;
+    border-top: none;
+    box-shadow: 0px 4px 40px #555555;
+    margin-top: 20px;
+}
+#hero .inner:hover .aft .folder-container{
+    width: 100%;
+    height: 100px;
+    flex-direction: row;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    border-bottom: 1px solid #202020;
+}
+
+#hero .inner:hover .dropleft{
+    border-radius: 0;
+    box-shadow: none;
+    width: 100%;
+    border-bottom: 1px solid rgb(171, 171, 171);
+}
+
+#hero .inner:hover .bef{
+    overflow:visible;
+    width: 100vw;
+    align-items: center;
+    }
+}
+
+/* End Media Query for Tablet *
