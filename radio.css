@@ -132,19 +132,22 @@ a {
 }
 .hero-right .recent{
     width: 100%;
-    height: 80vh;
+    height: 0;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
     background-color: rgba(26, 26, 26, 0.1);
     backdrop-filter: blur(10em);
+    overflow: hidden;
+}
+#hero .hero-right:hover .recent{
+    animation: open 3s ease forwards;
 }
 
 .dropdown-content {
     display: flex;
     flex-direction: row-reverse;
-    margin-bottom: 60px;
     width: 340px;
     height: 340px;
     border-radius: 20px;
@@ -153,7 +156,8 @@ a {
     border-bottom-right-radius: 70px;
     border-top-left-radius: 70px;
     align-items: center;
-    overflow: hidden;
+    overflow:hidden;
+    margin-top: 20px;
   }
 
   .dropdown-content:hover .dropleft{
@@ -161,7 +165,7 @@ a {
     animation: slide2 0.5s ease forwards;
   }
   .dropdown-content:hover .dropright{
-    width: 40%;
+    width: 50%;
     display: flex;
   }
 
@@ -175,16 +179,15 @@ a {
     padding-left: 20px;
     padding-right: 15px;
     padding-bottom: 20px;
-    background-color: rgba(35, 35, 35, 0.6);
-    backdrop-filter: blur(5px);
-    z-index: 2;
-    border-radius: 20px;
+    background-color: rgba(35, 35, 35, 0.9);
+    backdrop-filter: blur(10px);
+    z-index: 10;
     overflow: hidden;
     color: whitesmoke;
 }
  .songava{
     height: 80%;
-    box-shadow: 0px 4px 40px #555555;
+    box-shadow: 5px 5px 20pxrgb(10, 10, 10)5;
     margin-bottom: 20px;
     border-radius: 50%;
     animation: rota infinite 3s;
@@ -217,7 +220,7 @@ a {
 }
 .dropleft p{
     font-size: 13px;
-    color: black;
+    color: whitesmoke;
     margin-bottom: 10px;
 }
 
@@ -229,15 +232,18 @@ a {
     justify-content:start;
     display: none;
     overflow: hidden;
+    z-index: 1;
+    background-color: rgba(35, 35, 35, 0.5);
+    backdrop-filter: blur(10px);
+    padding-left: 10px;
 }
 .playe{
     width: 100%;
-    height: 100vh;
+    height: 80vh;
     flex-wrap: wrap;
     display: flex;
     justify-content:first baseline;
     align-items:self-start;
-    padding-top: 10vh;
     overflow: visible;
 }
 .playlists{
@@ -246,6 +252,7 @@ a {
     justify-content: center;
     align-items: center;
     display: flex;
+    overflow: hidden;
 }
 .lis{
     width: 290px;
@@ -262,9 +269,30 @@ a {
     padding-left: 10px;
     padding-right: 10px;
     box-shadow: 0px 4px 40px #555555;
-
+    overflow: hidden;
 }
-
+.lis:hover h3{
+    display: flex;
+}
+.lis h2{
+    font-size: 19px;
+}
+.lis h3{
+    display: none;
+    font-size: 13px;
+    color: rgb(54, 54, 54);
+}
+.hero-right .lmn{
+    display: none;
+    color: whitesmoke;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.hero-right:hover .lmn{
+    animation: reveall 2s forwards;
+    display: flex;
+    width: 0;
+}
 
 /* End Hero Section */
 
@@ -284,12 +312,22 @@ a {
         color:#252525;
     }
 }
-@keyframes slide2{
-    50%{
-        width: 40%;
+@keyframes reveall{
+
+    1%{
+        width: 0%;
     }
     100%{
-        width: 60%;
+        width: 65px;
+    }
+}
+
+@keyframes slide2{
+    50%{
+        width: 25%;
+    }
+    100%{
+        width: 100%;
     }
 }
 @keyframes rota{
@@ -299,6 +337,28 @@ a {
     100%{
         rotate: 360deg;
     }
+}
+@keyframes open{
+    1%{
+            border: 0.3px solid whitesmoke;
+            border-radius: 20px;
+            height: 0;
+    }    
+    50%{
+            border: 1px solid whitesmoke;
+            border-top-left-radius: 70px;
+            border-bottom-right-radius: 70px;
+            border-top-right-radius: 70px;
+            border-bottom-left-radius: 70px;
+        }
+        100%{
+            border: 0.5px solid whitesmoke;
+            border-top-left-radius: 70px;
+            border-bottom-right-radius: 70px;
+            border-top-right-radius: 20px;
+            border-bottom-left-radius: 20px;
+            height: 70vh;
+        }
 }
 
 /* End Keyframes */
@@ -336,28 +396,34 @@ a {
     height: max-content;
     padding-left: 5vw;
     padding-right: 5vw;
+    justify-content: space-around;
+    border-radius: 20px;
+}
+#hero .hero-right:hover .recent{
+    animation: none;
 }
 .dropdown-content{
-    width: 100%;
-    height: 50vh;
+    width: 80%;
+    height: 40vh;
     flex-direction: column-reverse;
     border-top-right-radius: 70px;
     border-top-left-radius: 70px;
     box-shadow: none;
     background-image: none;
-    border-radius: 0;
+    border-radius: 20px;
     padding: 0;
+    margin-bottom: 30px;
 }
 .dropdown-content:hover .dropleft{
     display: flex;
     animation: none;
+    height: 100%;
   }
   .dropdown-content:hover .dropright{
-    width: 100%;
+    display: none;
   }
 .dropleft{
     width: 100%;
-    height: 30%;
     display: flex;
     justify-content: center;
     padding-left: 15px;
@@ -370,11 +436,10 @@ a {
 }
 
 .dropright{
-    width: 100%;
-    height: 70%;
-    border-radius: 0;
-    display: flex;
-    justify-content: center;
+    display: none;
+}
+.songava{
+    display: none;
 }
 .playe{
     padding-top: 5vh;
@@ -387,6 +452,17 @@ a {
     width: 90%;
     height: 90%;
 }
+
+.dropleft .bar .play{
+    width: 56px;
+    display: flex;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.dropleft .bar img{
+    width: 50px;
+}
+
 
 }
 

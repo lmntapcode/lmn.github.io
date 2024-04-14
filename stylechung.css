@@ -1,6 +1,7 @@
 
 body{
     -webkit-line-box-contain: layout;
+    font-weight:2px;
 
 }
 #header{
@@ -9,12 +10,12 @@ body{
     left: 0;
     top: 0;
     width: 100vw;
-    height: 41px;
+  height: 45px;
     align-items: center;
 }
 #header .header-container{
     min-height: 44px;
-    height: 38px;
+    height: 100%;
     align-items: center;
     display: flex;
     flex-direction: row;
@@ -47,11 +48,12 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    align-items: center;
     animation: appear2 .5s ease forwards;
 }
  .folder-container{
     width: fit-content;
-    height: 37px;
+    height: 70%;
     align-items: center;
     justify-content: space-around;
     display: flex;
@@ -60,10 +62,23 @@ body{
 .list .folder-container:hover h4{
     color: whitesmoke;
     animation: appear9 .2s ease forwards;
+    font-size: 15px;
 }
-.bpafter .activeee{
-    border-bottom: 1px solid whitesmoke;
+.list .activee{
+    border: none;
+    border-radius: 0;
+    font-size: 20px;
+    animation: none;
 }
+.activeee{
+    border: 0.5px solid whitesmoke;
+    border-radius: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    overflow: hidden;
+}
+
+
  .bpafter a{
     flex-direction: row;
     display: flex;
@@ -92,19 +107,66 @@ body{
     display: flex;
 }
 
-#hero h1{
+.hero-container h1{
+    margin-bottom: 20px;
+    animation: open2 5s ease forwards;
     display: flex;
     font-size: 100px;
-    color: transparent;
-    animation: text_reveal2 1s ease forwards;
-    animation-delay: .1s;
+    color: whitesmoke;
     font-family: "Cabin";
+    overflow: hidden;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border: 0.5px solid whitesmoke;
+    height: max-content;
+    overflow: hidden;
+    border-radius: 60px;
 }
+
 .hero-container a{
     color: whitesmoke;
     margin-top: 20px;
     display: none;
 }
+.hero-container .lmnbu{
+    color: whitesmoke;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: revealll 4s ease forwards;
+    display: flex;
+    width: 0;
+    font-size: 100px;
+    align-items: center;
+}
+.lmnbu small{
+    margin-left: 10px;
+    font-size: 30px;
+}
+
+
+
+
+
+@keyframes revealll{
+
+    1%{
+        width: 0%;
+    }
+    90%{
+        width: 230px;
+    }
+}
+@keyframes reveallll{
+
+    1%{
+        flex-direction: row;
+    }
+    100%{
+        flex-direction: column;
+    }
+}
+
 
 @keyframes appear{
     0%{
@@ -124,38 +186,48 @@ body{
     }
 }
 
-@keyframes text_reveal2{
 
-    50%{
-        color: rgb(56, 56, 56);
-        font-size: 50px;
-    }
-    100%{
-        color:whitesmoke;
-    }
-}
-@keyframes text_reveal3{
-
-    50%{
-        color: rgb(56, 56, 56);
-        font-size: 35px;
-    }
-    100%{
-        color:whitesmoke;
-    }
-}
 @keyframes appear9{
 
     50%{
-        text-rendering: optimizeSpeed;
+        font-size: 17px;
     }
     100%{
         color:whitesmoke;
-        font-size: 17px;
+        font-size: 20px;
     }
 }
+@keyframes open2{
+  
+    1%{
+        width: 0;
+        height: 0;
+        }
+    50%{
+        width: 0;
+        height: 100px;
+    }
+    70%{
+            width: 70%;
+            height: 100px;
+            overflow: hidden;
+            border: 0.5px solid whitesmoke;
+            overflow: hidden;
+            border-radius: 60px;
+        }
+        99%{
+            width: 0;
+            overflow: visible;
+            border: 0.5px solid whitesmoke;
+        }
+    100%{
+            width: 0;
+            overflow: visible;
+            border: 0px solid whitesmoke;
+        }
+}
 
-
+ 
 /* End Header */
 
 
@@ -180,17 +252,44 @@ body{
     width: 100%;
     height: 100vh;
     justify-content: center;
-    text-align: left;
+    text-align: center;
     display: flex;
     flex-direction: column;
-    align-items:flex-start;
+    align-items:center;
     padding-left: 10vw;
     padding-right: 10vw;
     background-color: transparent;
 }
-#hero h1{
-    animation: text_reveal3 1s ease forwards;
-    animation-delay: .8s;
-    font-size: 70px;
+.hero-container h1{
+    font-size: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.hero-container .lmnbu{
+    font-size: 20px;
+    width: fit-content;
+    animation: none;
+}
+.hero-container .bul{
+    border: 0.5px solid whitesmoke;
+    height: 60px;
+    overflow: hidden;
+    flex-direction: row;
+    width: 80%;
+    font-size: 50px;
+    animation: open4 3s ease;
+}
+.hero-container .lmnbul{
+    animation-delay: 1s;
+    animation: reveal45 2s ease forwards;
+    font-size: 50px;
+}
+
+.lmnbu small{
+    margin-left: 0;
+    font-size: 20px;
 }
 }
