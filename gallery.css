@@ -221,6 +221,7 @@ a {
     border-top-left-radius: 70px;
     border-bottom-right-radius: 70px;
     border-top-right-radius: 70px;
+    filter: none;
 }
 }
 /* End Media Query for Tablet *

@@ -57,15 +57,7 @@ a {
     font-size: 18px;
 }
 
-#hero h1{
-    display: flex;
-    font-size: 70px;
-    color: transparent;
-    animation: text_reveal2 1s ease forwards;
-    animation-delay: .8s;
-    font-family: "Borel";
-    margin-top: 20px;
-}
+
 
 #hero .hero-right{
     width: 100%;
@@ -159,16 +151,7 @@ a {
         color:#252525;
     }
 }
-@keyframes text_reveal2{
 
-    50%{
-        color: rgb(56, 56, 56);
-        font-size: 90px;
-    }
-    100%{
-        color:whitesmoke;
-    }
-}
 
 /* End Keyframes */
 

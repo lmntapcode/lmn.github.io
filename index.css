@@ -25,41 +25,62 @@ a {
     background-size: 300px 300px;
     z-index: 1;
     width: 100vw;
-    height: 100vh;
+    height: 200vh;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    overflow: visible;
 }
 #hero .hero-container{
-    width: 50vw;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     justify-content: center;
-    text-align: justify;
+    text-align: center;
     display: flex;
     flex-direction: column;
-    align-items:flex-start;
+    align-items:center;
     padding-left: 5vw;
 }
 #hero h3{
     display: flex;
     font-size: 20px;
 }
-#hero h1{
+.hero-container .bul::after{
+    content: 'site';
+}
+.hero-container .bul{
+    border: 0.5px solid whitesmoke;
+    height: 0;
+    overflow: hidden;
+    border-radius: 60px;
+    animation: open3 3s ease forwards;
+    width: 0;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.hero-container .lmnbul{
+    color: whitesmoke;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: reveal 3s ease forwards;
+    animation-delay: 3s;
     display: flex;
-    font-size: 90px;
-    color: transparent;
-    animation: text_reveal2 1s ease forwards;
-    animation-delay: .8s;
-    font-family: "Cabin";
+    justify-content: center;
+    align-items: center;
+    width: 0;
+    font-size: 100px;
 }
 #hero p{
     font-size: 18px;
 }
 
 #hero .hero-right{
-    width: 50vw;
-    height: 90%;
+    width: 100vw;
+    height: 100vh;
     justify-content: center;
     align-items: center;
     display: flex;
@@ -79,6 +100,7 @@ a {
     flex-wrap: wrap;
     animation: appear .9s ease forwards;
 }
+
 .hero-right .folder-container{
     width: 50%;
     height: 50%;
@@ -120,17 +142,24 @@ a {
 
     /* Keyframes */
 
-@keyframes text_reveal{
+    @keyframes reveal{
 
-    50%{
-        color: white;
-        font-size: 90px;
+        1%{
+            width: 0%;
+        }
+        100%{
+            width: 200px;
+        }
     }
-    100%{
-        color:black;
-    }
-}
+    @keyframes reveal45{
 
+        1%{
+            width: 0%;
+        }
+        100%{
+            width: 100px;
+        }
+    }
 @keyframes scale{
     0%{
         scale: 1;
@@ -138,6 +167,36 @@ a {
     100%{
         scale: 1.1;
     }
+}
+@keyframes open3{
+  
+    1%{
+        height: 0;
+        width: 0;
+        }
+    50%{
+        height: 100px;
+        width: 0;
+    }
+    100%{
+        height: 100px;
+        width: 70%;
+        }
+}
+@keyframes open4{
+  
+    1%{
+        height: 0;
+        width: 0;
+        }
+    50%{
+        height: 60px;
+        width: 0;
+    }
+    100%{
+        height: 60px;
+        width: 80%;
+        }
 }
 /* End Keyframes */
 
@@ -150,17 +209,13 @@ a {
     height: 200vh;
     padding-top: 0ch;
 }
-#hero .hero-container{
-    width: 100%;
-    height: 100vh;
-    padding-top: 0%;
-}
 .adt{
     display: flex;
 }
 .minu{
     display: none;
 }
+
 #hero .hero-right{
     height: 100vh;
     width: 100%;
@@ -186,5 +241,10 @@ a {
 .hero-right .folder-container a{
     font-size: 15px;
 }
+
+.hero-container .bul::after{
+    content: none;
+}
+
 }
 /* End Media Query for Tablet */
