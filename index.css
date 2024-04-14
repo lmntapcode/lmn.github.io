@@ -209,6 +209,7 @@ a {
     height: 200vh;
     padding-top: 0ch;
 }
+
 .adt{
     display: flex;
 }
@@ -241,6 +242,7 @@ a {
 .hero-right .folder-container a{
     font-size: 15px;
 }
+
 
 .hero-container .bul::after{
     content: none;

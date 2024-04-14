@@ -160,7 +160,6 @@ a {
    align-items: end;
 }
 
-
 #hero .inner:hover .dropright{
     animation: appear5 .5s ease forwards;
     display: flex;

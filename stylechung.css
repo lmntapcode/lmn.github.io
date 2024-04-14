@@ -1,3 +1,4 @@
+
 body{
     -webkit-line-box-contain: layout;
     font-weight:2px;
@@ -9,7 +10,7 @@ body{
     left: 0;
     top: 0;
     width: 100vw;
-    height: 45px;
+  height: 45px;
     align-items: center;
 }
 #header .header-container{
@@ -77,6 +78,7 @@ body{
     overflow: hidden;
 }
 
+
  .bpafter a{
     flex-direction: row;
     display: flex;
@@ -104,7 +106,6 @@ body{
 .bpafter a:hover .open{
     display: flex;
 }
-
 
 .hero-container h1{
     margin-bottom: 20px;
@@ -167,7 +168,6 @@ body{
 }
 
 
-
 @keyframes appear{
     0%{
         scale: 0;
@@ -227,7 +227,7 @@ body{
         }
 }
 
-  
+ 
 /* End Header */
 
 
