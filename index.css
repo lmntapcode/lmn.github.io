@@ -20,8 +20,6 @@ a {
 
 /* Hero Section */
 #hero{
-    background-color:#202020;
-    color: whitesmoke;
     background-size: 300px 300px;
     z-index: 1;
     width: 100vw;
@@ -30,28 +28,50 @@ a {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    overflow: visible;
 }
 #hero .hero-container{
     width: 50vw;
-    height: 100%;
+    height: 100vh;
     justify-content: center;
-    text-align: justify;
+    text-align: center;
     display: flex;
     flex-direction: column;
-    align-items:flex-start;
+    align-items:center;
     padding-left: 5vw;
 }
 #hero h3{
     display: flex;
     font-size: 20px;
 }
-#hero h1{
+.hero-container .bul::after{
+    content: 'site';
+}
+.hero-container .bul{
+    border: 0.5px solid #202020;
+    height: 0;
+    overflow: hidden;
+    border-radius: 60px;
+    animation: open3 3s ease forwards;
+    width: 0;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin-top: 20px;
+    font-size: 70px;
+}
+
+.hero-container .lmnbul{
+    color: #202020;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: reveal 3s ease forwards;
+    animation-delay: 3s;
     display: flex;
-    font-size: 90px;
-    color: transparent;
-    animation: text_reveal2 1s ease forwards;
-    animation-delay: .8s;
-    font-family: "Cabin";
+    justify-content: center;
+    align-items: center;
+    width: 0;
+    font-size: 70px;
 }
 #hero p{
     font-size: 18px;
@@ -59,7 +79,7 @@ a {
 
 #hero .hero-right{
     width: 50vw;
-    height: 90%;
+    height: 100vh;
     justify-content: center;
     align-items: center;
     display: flex;
@@ -79,6 +99,7 @@ a {
     flex-wrap: wrap;
     animation: appear .9s ease forwards;
 }
+
 .hero-right .folder-container{
     width: 50%;
     height: 50%;
@@ -90,26 +111,43 @@ a {
     flex-direction: column;
     display: flex;
     text-align: center;
-    width: fit-content;
-    height: 25vh;
+    width: max-content;
+    height:max-content;
     align-items: center;
     justify-content: space-between;
+    color: #202020;
+    border-radius: 10px;
+}
+#hero .hero-right .bpafter h4{
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
 }
 #hero .hero-right .bpafter img{
     width: 200px;
     height: 200px;
-    margin-bottom: 20px;
-    border-radius: 30px;
 }
 
 .hero-right .closed{
     display: flex;
-    box-shadow: 0px 4px 40px #555555;
+    box-shadow: 0px 0px 20px #9d9d9d;
+    border-radius: 50%;
 }
 .hero-right .open{
     display: none;
-    box-shadow: 0px 4px 40px #555555;
+    box-shadow: 0px 0px 100px #9d9d9d;
+    border-radius: 10px;
 }
+
+.bpafter a:hover .closed{
+    display: none;
+}
+.bpafter a:hover .open{
+    display: flex;
+    box-shadow: none;
+}
+
 
 
 /* End Hero Section */
@@ -120,17 +158,24 @@ a {
 
     /* Keyframes */
 
-@keyframes text_reveal{
+    @keyframes reveal{
 
-    50%{
-        color: white;
-        font-size: 90px;
+        1%{
+            width: 0%;
+        }
+        100%{
+            width: 150px;
+        }
     }
-    100%{
-        color:black;
-    }
-}
+    @keyframes reveal45{
 
+        1%{
+            width: 0%;
+        }
+        100%{
+            width: 100px;
+        }
+    }
 @keyframes scale{
     0%{
         scale: 1;
@@ -138,6 +183,36 @@ a {
     100%{
         scale: 1.1;
     }
+}
+@keyframes open3{
+  
+    1%{
+        height: 0;
+        width: 0;
+        }
+    50%{
+        height: 100px;
+        width: 0;
+    }
+    100%{
+        height: 100px;
+        width: 73%;
+        }
+}
+@keyframes open4{
+  
+    1%{
+        height: 0;
+        width: 0;
+        }
+    50%{
+        height: 60px;
+        width: 0;
+    }
+    100%{
+        height: 60px;
+        width: 80%;
+        }
 }
 /* End Keyframes */
 
@@ -150,17 +225,13 @@ a {
     height: 200vh;
     padding-top: 0ch;
 }
-#hero .hero-container{
-    width: 100%;
-    height: 100vh;
-    padding-top: 0%;
-}
 .adt{
     display: flex;
 }
 .minu{
     display: none;
 }
+
 #hero .hero-right{
     height: 100vh;
     width: 100%;
@@ -170,21 +241,42 @@ a {
     display: flex;
     width: 100%;
     height: 100vh;
-    justify-content: space-around;
+    justify-content: center;
 }
 .hero-right .folder-container{
-    width: 50%;
-    height: 50%;
+    width: 100%;
+    height: 25%;
     justify-content: space-around;
     display: flex;
-    
 }
 #hero .hero-right .bpafter img{
-    width: 18vh;
-    height: 18vh;
+    display: none;
 }
-.hero-right .folder-container a{
-    font-size: 15px;
+
+#hero .hero-right .bpafter a{
+    width: 80vw;
+    height:70%;
+    align-items: center;
+    justify-content: space-around;
+    color: #202020;
+    padding: 0;
 }
+#hero .hero-right .bpafter h4{
+    border: 0.5px solid #202020;
+    width: 80vw;
+    height:100%;
+    border-radius: 20px;
+    display: flex;
+    padding: 0;
+}
+#hero .hero-right .bpafter a:hover h4{
+    font-size: 20px;
+    animation: scales 0.3s ease forwards;
+    border: none;
+}
+.hero-container .bul::after{
+    content: none;
+}
+
 }
 /* End Media Query for Tablet */
