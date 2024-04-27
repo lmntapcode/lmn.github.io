@@ -86,15 +86,14 @@ a {
 /* Hero Section */
 #hero{
     z-index: 1;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     display: flex;
     flex-wrap: wrap;
-    overflow: scroll;
-    background-color:#202020;
+    overflow: hidden;
 }
 #hero .hero-container{
-    width: 100%;
+    width: 50vw;
     height: 100vh;
     background-size: cover;
     justify-content: center;
@@ -104,21 +103,24 @@ a {
     align-items: center;
     padding-left: 20px;
     padding-right: 20px;
-    color: whitesmoke;
     font-size: 18px;
 }
-
-#hero .hero-right{
-    width: 100%;
+#hero .rightbu{
+    width: 50vw;
     height: 100vh;
-    justify-content: center;
-    align-items: center;
     display: flex;
-    overflow:visible;
-    background-color:transparent;
-    padding-top: 10vh;
-    padding-left: 20px;
-    padding-right: 20px;
+    overflow: scroll;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 50px;
+}
+#hero .hero-right{
+    width: 50vw;
+    height: max-content;
+    justify-content: center;
+    align-items: start;
+    display: flex;
+    overflow:hidden;
     flex-direction: column;
 }
 #hero .hero-right h1{
@@ -128,32 +130,42 @@ a {
     align-items: center;
     justify-content: center;
     display: flex;
-    color: whitesmoke;
+    color: #202020;
+}
+#hero .hero-right .adtt{
+    font-size: 15px;
+    width: 100%;
+    height: fit-content;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    color: #202020;
 }
 .hero-right .recent{
     width: 100%;
-    height: 80vh;
+    height: 70vh;
     display: flex;
-    flex-direction: row;
     align-items: center;
-    justify-content: space-around;
-    background-color: rgba(26, 26, 26, 0.1);
+    flex-wrap: wrap;
+    justify-content: space-evenly;
     backdrop-filter: blur(10em);
+    margin-top: 20px;
+    overflow-y: visible;
+    padding-left: 3vw;
+    padding-right: 3vw;
+    margin-bottom: 10vh;
 }
 
 .dropdown-content {
     display: flex;
     flex-direction: row-reverse;
-    margin-bottom: 60px;
-    width: 340px;
-    height: 340px;
-    border-radius: 20px;
-    box-shadow: 0px 4px 40px #555555;
+    width: 15.5vw;
+    height: 15.5vw;
+    box-shadow: 0px 0px 20px #9d9d9d;
     overflow: hidden;
-    border-bottom-right-radius: 70px;
-    border-top-left-radius: 70px;
     align-items: center;
-    overflow: hidden;
+    margin-bottom: 30px;
+    border-radius: 20px;
   }
 
   .dropdown-content:hover .dropleft{
@@ -161,50 +173,54 @@ a {
     animation: slide2 0.5s ease forwards;
   }
   .dropdown-content:hover .dropright{
-    width: 40%;
+    width: 0%;
     display: flex;
   }
 
 .dropleft{
-    width: 0%;
+    width: 100%;
     height: 100%;
     display: none;
     flex-direction: column;
     align-items:center;
     justify-content: center;
-    padding-left: 20px;
-    padding-right: 15px;
-    padding-bottom: 20px;
-    background-color: rgba(35, 35, 35, 0.6);
-    backdrop-filter: blur(5px);
-    z-index: 2;
-    border-radius: 20px;
+    text-align: center;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    background-color: rgba(35, 35, 35, 0.5);
+    backdrop-filter: blur(10px);
     overflow: hidden;
     color: whitesmoke;
 }
  .songava{
-    height: 80%;
-    box-shadow: 0px 4px 40px #555555;
-    margin-bottom: 20px;
+    height: 70%;
+    box-shadow: 5px 5px 20px rgb(10, 10, 10);
     border-radius: 50%;
     animation: rota infinite 3s;
+    margin-left: 70%;
 }
 .bar{
     width: 100%;
     height: 70px;
     align-items: center;
-    justify-content: center;
-    flex-direction: row;
+    justify-content: space-around;
     display: flex;
 }
 .dropleft .bar .play{
     width: 34px;
     display: flex;
-    margin-left: 20px;
-    margin-right: 20px;
 }
 .dropleft .bar img{
     width: 33px;
+}
+.dropleft .bar a{
+    width: 20px;
+    height: 20px;
+}
+.dropleft .bar a img{
+    width: 20px;
+    height: 20px;
 }
 .dropleft h2{
     font-size: 20px;
@@ -217,7 +233,7 @@ a {
 }
 .dropleft p{
     font-size: 13px;
-    color: black;
+    color: whitesmoke;
     margin-bottom: 10px;
 }
 
@@ -225,48 +241,93 @@ a {
     width: 0%;
     height: 100%;
     display: flex;
-    align-items: center;
-    justify-content:start;
+    align-items:center;
+    justify-content:center;
     display: none;
     overflow: hidden;
+    background-color: rgba(35, 35, 35, 0.5);
+    backdrop-filter: blur(10px);
 }
 .playe{
     width: 100%;
-    height: 100vh;
+    height: 70vh;
     flex-wrap: wrap;
     display: flex;
-    justify-content:first baseline;
-    align-items:self-start;
-    padding-top: 10vh;
-    overflow: visible;
+    align-items: center;
+    overflow-y: scroll;
+    padding-left: 3vw;
+    padding-right: 3vw;
+    margin-top: 20px;
+    margin-bottom: 10vh;
+    padding-top: 44px;
+    padding-bottom: 44px;
+    gap: 30px;
+    justify-content: center;
 }
 .playlists{
-    width: 25%;
-    height: 400px;
+    width: fit-content;
+    height: fit-content;
     justify-content: center;
     align-items: center;
     display: flex;
+    overflow: visible;
+    flex: 0 0 200px;
 }
 .lis{
-    width: 290px;
-    height: 290px;
-    background-color: antiquewhite;
+    width: 200px;
+    height: 200px;
+    background-color: rgb(255, 255, 255);
     display: flex;
-    align-items: start;
+    align-items: center;
     justify-content: center;
     flex-direction: column;
-    border-bottom-right-radius: 70px;
-    border-top-left-radius: 70px;
-    border-bottom-left-radius: 20px;
-    border-top-right-radius: 20px;
     padding-left: 10px;
     padding-right: 10px;
-    box-shadow: 0px 4px 40px #555555;
+    overflow: hidden;
+    border-radius: 10px;
+    border: 0.5px solid #202020;
+}
+.lis:hover h3{
+    display: flex;
 }
 .lis h2{
     font-size: 19px;
+    width: 150px;
+    height: fit-content;
+    color: #202020;
+    align-items: center;
+    display:flex;
+    padding-left: 5px;
 }
-
+.lis h3{
+    display: none;
+    font-size: 13px;
+    color: #202020;
+}
+.playlists a{
+    width: fit-content;
+    height: fit-content;
+}
+.playlists a:hover .lis{
+    animation: scales 0.5s ease forwards;
+    border:0;
+}
+.playlists a:hover .lis h2{
+    width: 100px;
+    height: fit-content;
+}
+.hero-right .lmn{
+    display: none;
+    color: whitesmoke;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.hero-right:hover .lmn{
+    animation: reveall 2s forwards;
+    display: flex;
+    width: 0;
+    color: #202020;
+}
 
 /* End Hero Section */
 
@@ -286,12 +347,23 @@ a {
         color:#252525;
     }
 }
-@keyframes slide2{
-    50%{
-        width: 40%;
+@keyframes reveall{
+
+    1%{
+        width: 0%;
     }
     100%{
-        width: 60%;
+        width: 55px;
+    }
+}
+
+@keyframes slide2{
+    1%{
+        opacity: 0.2;
+    }
+
+    100%{
+        opacity: 1;
     }
 }
 @keyframes rota{
@@ -302,6 +374,30 @@ a {
         rotate: 360deg;
     }
 }
+@keyframes open{
+    1%{
+            border: 0.3px solid whitesmoke;
+            border-radius: 20px;
+            height: 0;
+            overflow: hidden;
+    }    
+    50%{
+            border: 1px solid whitesmoke;
+            border-top-left-radius: 70px;
+            border-bottom-right-radius: 70px;
+            border-top-right-radius: 70px;
+            border-bottom-left-radius: 70px;
+        }
+        100%{
+            border: 0px solid whitesmoke;
+            border-top-left-radius: 70px;
+            border-bottom-right-radius: 70px;
+            border-top-right-radius: 20px;
+            border-bottom-left-radius: 20px;
+            height: 80vh;
+            overflow: hidden;
+        }
+}
 
 /* End Keyframes */
 
@@ -309,16 +405,21 @@ a {
 @media only screen and (max-width:1000px){
 #hero{
         background-image: none;
-        background-color:#202020;
-        color: black;
+        overflow: scroll ;
 }
 #hero .hero-container{
     width: 100%;
     height: 100vh;
 }
+#hero .rightbu{
+    width: 100%;
+    overflow: visible;
+    background-color: rgb(255, 255, 255);
+    height: max-content;
+}
 
 #hero .hero-right{
-    width: 100%;
+    width: 100vw;
     height: max-content;
     flex-direction: column;
     padding-top: 0px;
@@ -329,67 +430,103 @@ a {
     align-items: center;
     justify-content: center;
     display: flex;
-    color: whitesmoke;
-    padding-top: 70px;
-    margin-bottom: 30px;
 }
 .hero-right .recent{
-    flex-direction: column;
     height: max-content;
-    padding-left: 5vw;
-    padding-right: 5vw;
+    justify-content: space-around;
+    border-radius: 20px;
+    animation: none;
+    margin-top: 50px;
+    padding-left: 0;
+    padding-right: 0;
 }
 .dropdown-content{
-    width: 100%;
-    height: 50vh;
+    width: 70vw;
+    height: 70vw;
     flex-direction: column-reverse;
     border-top-right-radius: 70px;
     border-top-left-radius: 70px;
     box-shadow: none;
     background-image: none;
-    border-radius: 0;
+    border-radius: 20px;
     padding: 0;
+    margin-bottom: 50px;
+    border: 0.5px solid #202020;
 }
 .dropdown-content:hover .dropleft{
     display: flex;
     animation: none;
+    height: 40%;
+    width: 100%;
   }
   .dropdown-content:hover .dropright{
-    width: 100%;
+    display: none;
   }
 .dropleft{
     width: 100%;
-    height: 30%;
+    height: 40%;
     display: flex;
     justify-content: center;
     padding-left: 15px;
     padding-right: 15px;
-    background-color: rgba(21, 21, 21,0.5);
-    backdrop-filter: blur(10px);
+    background-color: rgba(14, 14, 14, 0.5);
+    backdrop-filter: blur(5px);
     color: whitesmoke;
     border-radius: 0;
-    padding-top: 10px;
+}
+.dropleft .bar{
+    height: 10vh;
+    margin-bottom: 10px;
+    margin-top: 10px;
 }
 
 .dropright{
-    width: 100%;
-    height: 70%;
-    border-radius: 0;
-    display: flex;
-    justify-content: center;
+    display: none;
+}
+.songava{
+    display: none;
 }
 .playe{
     padding-top: 5vh;
+    margin-bottom: 100px;
+    height: max-content;
+    width: 100%;
+    overflow: visible;
 }
 .playlists{
-    height: 50vw;
-    width: 50%;
+    flex: 0 0 38px;
 }
+.playlists a{
+    width: 30vw;
+    height: 30vw;
+}
+.playlists a:hover .lis{
+    border: 0px;
+}
+
 .lis{
-    width: 90%;
-    height: 90%;
+    width: 30vw;
+    height: 30vw;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: none;
+    border: 0.5px solid #202020;
+}
+.lis h2{
+    width: 100px;
+    height: fit-content;
+}
+.lis h3{
+    display: flex;
 }
 
+.dropleft .bar .play{
+    width: 35px;
+    display: flex;
 }
+.dropleft .bar img{
+    width: 30px;
 
+}
+}
 /* End Media Query for Tablet *
