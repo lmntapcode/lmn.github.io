@@ -329,6 +329,7 @@ a {
     color: #202020;
 }
 
+
 /* End Hero Section */
 
 
@@ -364,6 +365,7 @@ a {
 
     100%{
         opacity: 1;
+
     }
 }
 @keyframes rota{

@@ -23,7 +23,7 @@ a {
     background-size: 300px 300px;
     z-index: 1;
     width: 100vw;
-    height: 100vh;
+    height: 200vh;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -225,6 +225,7 @@ a {
     height: 200vh;
     padding-top: 0ch;
 }
+
 .adt{
     display: flex;
 }
@@ -261,6 +262,7 @@ a {
     color: #202020;
     padding: 0;
 }
+
 #hero .hero-right .bpafter h4{
     border: 0.5px solid #202020;
     width: 80vw;
@@ -274,6 +276,7 @@ a {
     animation: scales 0.3s ease forwards;
     border: none;
 }
+
 .hero-container .bul::after{
     content: none;
 }

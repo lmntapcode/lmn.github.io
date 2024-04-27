@@ -57,6 +57,7 @@ a {
     font-size: 18px;   
 }
 
+
 #hero .hero-right{
     width: 50vw;
     height: 100vh;
@@ -168,6 +169,7 @@ a {
 .dropright h3{
     display: none;
 }
+
 #hero .inner:hover .dropright{
     animation: appear5 1s ease forwards;
     display: flex;

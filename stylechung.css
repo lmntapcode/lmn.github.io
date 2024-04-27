@@ -1,3 +1,4 @@
+
 body{
     -webkit-line-box-contain: layout;
     font-weight:2px;
@@ -14,6 +15,7 @@ body{
     background-color: rgb(255, 255, 255);
 }
 #header .header-container{
+
     height: 100%;
     align-items: center;
     justify-content: center;
@@ -83,6 +85,7 @@ body{
     overflow: hidden;
 }
 
+
  .bpafter a{
     flex-direction: row;
     display: flex;
@@ -123,6 +126,44 @@ body{
     margin-top: 20px;
     display: none;
 }
+.hero-container .lmnbu{
+    color: whitesmoke;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: revealll 4s ease forwards;
+    display: flex;
+    width: 0;
+    font-size: 100px;
+    align-items: center;
+}
+.lmnbu small{
+    margin-left: 10px;
+    font-size: 30px;
+}
+
+
+
+
+
+@keyframes revealll{
+
+    1%{
+        width: 0%;
+    }
+    90%{
+        width: 230px;
+    }
+}
+@keyframes reveallll{
+
+    1%{
+        flex-direction: row;
+    }
+    100%{
+        flex-direction: column;
+    }
+}
+
 
 .hero-container .lmnbu{
     color: #202020;
@@ -274,6 +315,19 @@ body{
         scale: 1;
         box-shadow: 0px 0px 2px #9d9d9d;
     }
+    70%{
+            width: 70%;
+            height: 100px;
+            overflow: hidden;
+            border: 0.5px solid whitesmoke;
+            overflow: hidden;
+            border-radius: 60px;
+        }
+        99%{
+            width: 0;
+            overflow: visible;
+            border: 0.5px solid whitesmoke;
+        }
     100%{
         scale: 1.1;
         box-shadow: 2px 2px 20px #9d9d9d;
@@ -281,7 +335,7 @@ body{
 }
 
 
-  
+
 /* End Header */
 
 
@@ -345,6 +399,7 @@ body{
     font-size: 50px;
     animation: open4 3s ease;
 }
+
 .hero-container .lmnbul{
     animation-delay: 1s;
     animation: reveal45 2s ease forwards;
